@@ -6,7 +6,7 @@ import file from '../media/file.svg';
 
 const StatusItem = ({ imgSrc, altText, title, value }) => {
   return (
-    <div className="m-4 flex justify-between items-center bg-[#DEEBFF] rounded-full px-6 py-4 w-full max-w-3xl mx-auto cursor-pointer hover:opacity-75">
+    <div className="m-4 flex justify-between items-center bg-[#DEEBFF] rounded-full px-6 py-4 w-full max-w-4xl mx-auto cursor-pointer hover:opacity-75">
       <img 
         src={imgSrc} 
         alt={altText} 
@@ -18,7 +18,7 @@ const StatusItem = ({ imgSrc, altText, title, value }) => {
   );
 };
 
-const Status_bar = () => {
+const StatusBar = () => {
   return (
     <div className="space-y-4 flex-auto">
       <div className="m-4 flex justify-between items-center bg-[#DEEBFF] rounded-full px-6 py-4 w-full max-w-3xl mx-auto cursor-pointer hover:opacity-80">
@@ -52,4 +52,4 @@ const Status_bar = () => {
   );
 };
 
-export default Status_bar;
+export default StatusBar;
