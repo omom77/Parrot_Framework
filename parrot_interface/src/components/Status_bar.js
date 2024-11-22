@@ -2,16 +2,17 @@ import React from 'react';
 import build_plate from '../media/build_plate.svg';
 import extruder from '../media/extruder.svg';
 import clock from '../media/clock.svg';
+import file from '../media/file.svg';
 
 const StatusItem = ({ imgSrc, altText, title, value }) => {
   return (
-    <div className="m-4 flex justify-between items-center bg-[#DEEBFF] rounded-full px-6 py-4 w-full max-w-3xl mx-auto">
+    <div className="m-4 flex justify-between items-center bg-[#DEEBFF] rounded-full px-6 py-4 w-full max-w-3xl mx-auto cursor-pointer hover:opacity-75">
       <img 
         src={imgSrc} 
         alt={altText} 
         className="w-16 h-auto cursor-pointer hover:opacity-75"
       />
-      <h1 className="text-black chakra-petch-light text-4xl text-center flex-1 mx-4">{title}</h1>
+      <h1 className="text-black chakra-petch-light text-3xl text-center flex-1 mx-4">{title}</h1>
       <p className="text-black chakra-petch-light text-3xl px-4">{value}</p>
     </div>
   );
@@ -20,6 +21,14 @@ const StatusItem = ({ imgSrc, altText, title, value }) => {
 const Status_bar = () => {
   return (
     <div className="space-y-4 flex-auto">
+      <div className="m-4 flex justify-between items-center bg-[#DEEBFF] rounded-full px-6 py-4 w-full max-w-3xl mx-auto cursor-pointer hover:opacity-80">
+      <img 
+        src={file} 
+        alt={file} 
+        className="w-16 h-auto"
+      />
+      <h1 className="text-black chakra-petch-light text-3xl text-center flex-1 mx-4">Filename.gcode</h1>
+    </div>
       <StatusItem 
         imgSrc={build_plate} 
         altText="build_plate" 
@@ -39,6 +48,7 @@ const Status_bar = () => {
         value="0" 
       />
     </div>
+    
   );
 };
 
