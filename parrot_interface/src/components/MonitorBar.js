@@ -1,19 +1,54 @@
 import React from 'react';
-import arrow_down from '../media/arrow_down.svg';
+import build_plate from '../media/build_plate.svg';
+import extruder from '../media/extruder.svg';
+import clock from '../media/clock.svg';
+import file from '../media/file.svg';
+
+const StatusItem = ({ imgSrc, altText, title, value }) => {
+  return (
+    <div className="m-4 flex justify-between items-center bg-[#DEEBFF] rounded-full px-6 py-4 h-24 w-full max-w-4xl mx-auto cursor-pointer hover:opacity-75">
+      <img 
+        src={imgSrc} 
+        alt={altText} 
+        className="w-16 h-auto cursor-pointer hover:opacity-75"
+      />
+      <h1 className="text-black chakra-petch-light text-3xl text-center flex-1 mx-4">{title}</h1>
+      <p className="text-black chakra-petch-light text-3xl px-4">{value}</p>
+    </div>
+  );
+};
 
 const MonitorBar = () => {
   return (
-    // <div className="mx-4 inline-flex justify-center items-center border-2 border-black rounded-full px-4 py-2">
-    // <div className="flex justify-center">
-        <div className="mx-4 inline-flex justify-center items-center px-4 py-2">
-        <h1 className="text-black chakra-petch-light text-6xl mr-4 pl-4 pr-16">Monitor & Control</h1>
-        <img 
-            src={arrow_down} 
-            alt="Arrow Down" 
-            className="w-16 h-auto pr-4 cursor-pointer hover:opacity-75"
-        />
-        </div>
-    // </div>
+    <div className="space-y-4 flex-auto">
+      <div className="m-4 px-6 py-4 flex justify-between items-center bg-[#DEEBFF] rounded-full h-20 w-full max-w-3xl mx-auto cursor-pointer hover:opacity-80">
+      <img 
+        src={file} 
+        alt={file} 
+        className="w-16 h-auto"
+      />
+      <h1 className="text-black chakra-petch-light text-3xl text-center flex-1 mx-4">Filename.gcode</h1>
+    </div>
+      <StatusItem 
+        imgSrc={build_plate} 
+        altText="build_plate" 
+        title="Build Plate Temperature" 
+        value="0" 
+      />
+      <StatusItem 
+        imgSrc={extruder} 
+        altText="extruder" 
+        title="Extruder Temperature" 
+        value="0" 
+      />
+      <StatusItem 
+        imgSrc={clock} 
+        altText="clock" 
+        title="Estimated Completion Time" 
+        value="0" 
+      />
+    </div>
+    
   );
 };
 
