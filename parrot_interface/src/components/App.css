@@ -67,7 +67,7 @@
 }
 
 body {
-  background: linear-gradient(to right, #d7ddec, #eee6d9, #f2ebe8, #f1e7db);
+  background: #fff;
   color: white; /* Optional: Ensures text is readable */
   margin: 0; /* Removes default margin */
 }
