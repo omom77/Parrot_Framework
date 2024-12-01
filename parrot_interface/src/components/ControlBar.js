@@ -5,7 +5,7 @@ import cancel_img from '../media/cancel_img.svg';
 
 const StatusItem = ({ imgSrc, altText, title }) => {
   return (
-    <div className="flex items-center justify-center bg-[#A1C6FF] text-black rounded-full px-6 py-4 w-full hover:opacity-75">
+    <div className="flex items-center justify-center bg-[#A1C6FF] text-black rounded-3xl px-6 py-4 w-full hover:opacity-75">
       <img 
         src={imgSrc} 
         alt={altText} 

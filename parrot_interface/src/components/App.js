@@ -17,7 +17,7 @@ function App() {
         {/* <PrinterStatus /> */}
       </div>
 
-      <div className="flex justify-between m-4">
+      <div className="flex justify-between m-4 space-x-4">
         
         <div className="w-1/2">
           <MonitorBar />
